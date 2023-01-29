@@ -8,18 +8,22 @@ namespace EmployeeWage
     {
         static void Main(string[] args)
         {
-            Random r = new Random();
-            int value = r.Next(0, 2);//only generate values bt 0-2 means 0,1 ;
-            // 0 is for present;
-            // 1 is for absent;
-            if (value == 0)
+            int wagePerHr = 20;
+            int wage = 0, empHr = 0;
+            Random random = new Random();
+            int check = random.Next(0, 2);
+            if (check == 0)
             {
-                Console.WriteLine("Present");
+                empHr = 8;
             }
             else
             {
-                Console.WriteLine("Absent");
+                empHr = 0;
             }
+
+            wage = wagePerHr * empHr;
+            Console.WriteLine("Total Wage=" + wage);
         }
     }
+    
 }
